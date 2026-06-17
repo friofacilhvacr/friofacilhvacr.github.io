@@ -4,84 +4,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Friofácil HVACR — Engenharia de Climatização e PMOC</title>
-    <!-- Cérebro Visual Oficial do Tailwind CSS via Script Direto -->
-    <script src="https://tailwindcss.com"></script>
+    <!-- Fiação Estética Direta e Embutida (Zero Dependência de Links Externos) -->
+    <style>
+        body { background-color: #0b0f19; color: #f1f5f9; font-family: sans-serif; margin: 0; padding: 0; }
+        header { position: fixed; top: 0; w-full; width: 100%; background-color: #0b0f19; border-bottom: 1px solid #1e293b; z-index: 50; }
+        .container-nav { max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 80px; display: flex; align-items: center; justify-content: space-between; }
+        .logo { font-size: 24px; font-weight: 900; letter-spacing: -1px; color: #ffffff; }
+        .logo-dot { color: #0ea5e9; }
+        .badge-hvacr { font-size: 10px; font-family: monospace; background-color: #1e293b; color: #94a3b8; padding: 2px 8px; border: 1px solid #334155; border-radius: 4px; margin-left: 8px; }
+        .nav-links a { color: #94a3b8; text-decoration: none; font-size: 14px; margin-left: 32px; font-weight: 500; }
+        .nav-links a:hover { color: #ffffff; }
+        .btn-nav { background-color: #0ea5e9; color: #ffffff !important; padding: 8px 16px; border-radius: 4px; font-weight: 600; transition: background 0.2s; }
+        .btn-nav:hover { background-color: #0284c7; }
+        
+        .hero { min-h-screen; height: 90vh; display: flex; align-items: center; justify-content: center; text-align: center; padding-top: 80px; background: linear-gradient(180deg, #0f172a 0%, #0b0f19 100%); }
+        .hero-content { max-width: 800px; padding: 0 24px; }
+        .tag-endereco { font-size: 12px; font-family: monospace; text-transform: uppercase; color: #38bdf8; background-color: rgba(14, 165, 233, 0.1); padding: 6px 16px; border-radius: 9999px; border: 1px solid rgba(14, 165, 233, 0.2); display: inline-block; }
+        h1 { font-size: 48px; font-weight: 900; tracking-tight; color: #ffffff; margin-top: 24px; margin-bottom: 24px; line-height: 1.2; }
+        .text-accent { color: #0ea5e9; }
+        .lead { font-size: 18px; color: #94a3b8; line-height: 1.6; margin-bottom: 40px; }
+        .btn-main { display: inline-block; background-color: #0ea5e9; color: #ffffff; text-decoration: none; padding: 16px 32px; font-weight: 700; border-radius: 6px; box-shadow: 0 10px 15px -3px rgba(14, 165, 233, 0.3); transition: transform 0.2s, background 0.2s; }
+        .btn-main:hover { background-color: #0284c7; transform: scale(1.05); }
+        
+        .solucoes-section { padding: 96px 24px; background-color: #0b0f19; border-top: 1px solid #1e293b; text-align: center; }
+        .grid-cards { max-width: 1200px; margin: 48px auto 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; }
+        .card { padding: 32px; background-color: rgba(30, 41, 59, 0.3); border: 1px solid #1e293b; border-radius: 6px; text-align: left; }
+        .card-num { w-12; h-12; width: 48px; height: 48px; background-color: rgba(14, 165, 233, 0.1); border: 1px solid rgba(14, 165, 233, 0.2); color: #38bdf8; display: flex; align-items: center; justify-content: center; font-weight: bold; border-radius: 4px; margin-bottom: 24px; }
+        .card h3 { font-size: 20px; color: #ffffff; margin: 0 0 12px 0; }
+        .card p { font-size: 14px; color: #94a3b8; line-height: 1.6; margin: 0; }
+        
+        footer { padding: 48px 24px; background-color: #020617; border-top: 1px solid #1e293b; font-family: monospace; font-size: 12px; color: #64748b; }
+        .footer-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; wrap: flex-wrap; }
+        .footer-left { text-align: left; line-height: 1.8; }
+        .footer-right { text-align: right; line-height: 1.8; }
+        @media (max-width: 768px) { h1 { font-size: 32px; } .footer-container { flex-direction: column; text-align: center; } .footer-left, .footer-right { text-align: center; } .hidden-mobile { display: none; } }
+    </style>
 </head>
-<body class="bg-gray-950 text-gray-100 font-sans antialiased">
+<body>
 
-    <!-- HEADER / NAVEGAÇÃO CORPORATIVA -->
-    <header class="fixed top-0 w-full bg-gray-950 bg-opacity-90 border-b border-gray-800 z-50">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <div class="flex items-center space-x-2">
-                <span class="text-2xl font-black tracking-tighter text-white">FRIOFÁCIL<span class="text-blue-500">.</span></span>
-                <span class="text-xs font-mono uppercase bg-gray-800 text-gray-400 px-2 py-0.5 rounded border border-gray-700 tracking-widest">HVACR</span>
+    <!-- HEADER / NAVEGAÇÃO -->
+    <header>
+        <div class="container-nav">
+            <div style="display: flex; align-items: center;">
+                <span class="logo">FRIOFÁCIL<span class="logo-dot">.</span></span>
+                <span class="badge-hvacr">HVACR</span>
             </div>
-            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wide text-gray-400">
-                <a href="#solucoes" class="hover:text-white transition-colors">Soluções</a>
-                <a href="#pmoc" class="hover:text-white transition-colors">Conformidade Legal</a>
-                <a href="https://wa.me" target="_blank" class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded font-semibold transition-all">Engenharia Comercial</a>
+            <nav class="nav-links hidden-mobile">
+                <a href="#solucoes">Soluções</a>
+                <a href="#pmoc">Conformidade Legal</a>
+                <a href="https://wa.me" target="_blank" class="btn-nav">Engenharia Comercial</a>
             </nav>
         </div>
     </header>
 
-    <!-- HERO SECTION (O ESCUDO DA FARIA LIMA) -->
-    <section class="relative min-h-screen flex items-center justify-center pt-32 pb-20 bg-gray-900">
-        <div class="max-w-4xl mx-auto px-6 text-center z-10 my-auto">
-            <span class="inline-block text-xs font-mono uppercase tracking-widest text-blue-400 bg-blue-500 bg-opacity-10 px-4 py-1.5 rounded-full border border-blue-500 border-opacity-20 mb-6">Sede Corporativa: Av. Brigadeiro Faria Lima, 1572</span>
-            <h1 class="text-4xl md:text-6xl font-black tracking-tight text-white mb-6 leading-tight">
-                Engenharia Térmica Onde o <br><span class="text-blue-500">Erro Não É Uma Opção.</span>
-            </h1>
-            <p class="text-base md:text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-                Sistemas de climatização industrial, adequação rígida de PMOC e auditoria preditiva 24h por telemetria para garantir a lucratividade e a segurança jurídica da sua infraestrutura.
-            </p>
-            <div class="flex items-center justify-center">
-                <a href="https://wa.me" target="_blank" class="inline-block px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded transition-all tracking-wide shadow-xl">
-                    Ativar Engenheiro Comercial via WhatsApp
-                </a>
-            </div>
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="tag-endereco">Sede Corporativa: Av. Brigadeiro Faria Lima, 1572</span>
+            <h1>Engenharia Térmica Onde o <br><span class="text-accent">Erro Não É Uma Opção.</span></h1>
+            <p class="lead">Sistemas de climatização industrial, adequação rígida de PMOC e auditoria preditiva 24h por telemetria para garantir a lucratividade e a segurança jurídica da sua infraestrutura.</p>
+            <a href="https://wa.me" target="_blank" class="btn-main">Ativar Engenheiro Comercial via WhatsApp</a>
         </div>
     </section>
 
-    <!-- MÓDULO DE SOLUÇÕES AVANÇADAS -->
-    <section id="solucoes" class="py-24 border-t border-gray-900 bg-gray-950">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center max-w-2xl mx-auto mb-16">
-                <h2 class="text-3xl font-black tracking-tight text-white sm:text-4xl">Soluções Corporativas Industriais</h2>
-                <p class="mt-4 text-gray-400">Operação ágil de alta eficiência cobrindo o eixo estratégico de São Paulo.</p>
+    <!-- MÓDULO DE SOLUÇÕES -->
+    <section id="solucoes" class="solucoes-section">
+        <h2 style="font-size: 32px; font-weight: 900; color: #ffffff; margin: 0;">Soluções Corporativas Industriais</h2>
+        <p style="color: #94a3b8; margin-top: 16px;">Operação ágil de alta eficiência cobrindo o eixo estratégico de São Paulo.</p>
+        
+        <div class="grid-cards">
+            <div class="card">
+                <div class="card-num">01</div>
+                <h3>Manutenção Avançada</h3>
+                <p>Intervenções preventivas e corretivas cirúrgicas em sistemas centrais, Chillers, Splitões e VRF para manter o rendimento térmico nominal.</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- CARD 1 -->
-                <div class="p-8 bg-gray-900 bg-opacity-40 rounded border border-gray-800 hover:border-gray-700 transition-all duration-300">
-                    <div class="w-12 h-12 rounded bg-blue-500 bg-opacity-10 border border-blue-500 border-opacity-20 flex items-center justify-center text-blue-400 font-bold text-lg mb-6">01</div>
-                    <h3 class="text-xl font-bold text-white mb-3">Manutenção Avançada</h3>
-                    <p class="text-sm text-gray-400 leading-relaxed">Intervenções preventivas e corretivas cirúrgicas em sistemas centrais, Chillers, Splitões e VRF para manter o rendimento térmico nominal.</p>
-                </div>
-                <!-- CARD 2 -->
-                <div id="pmoc" class="p-8 bg-gray-900 bg-opacity-40 rounded border border-gray-800 hover:border-gray-700 transition-all duration-300">
-                    <div class="w-12 h-12 rounded bg-blue-500 bg-opacity-10 border border-blue-500 border-opacity-20 flex items-center justify-center text-blue-400 font-bold text-lg mb-6">02</div>
-                    <h3 class="text-xl font-bold text-white mb-3">Sistemas de PMOC</h3>
-                    <p class="text-sm text-gray-400 leading-relaxed">Implantação, execução e ART de Planos de Manutenção, Operação e Controle em estrita conformidade com a Lei 13.589/2018 da ANVISA.</p>
-                </div>
-                <!-- CARD 3 -->
-                <div class="p-8 bg-gray-900 bg-opacity-40 rounded border border-gray-800 hover:border-gray-700 transition-all duration-300">
-                    <div class="w-12 h-12 rounded bg-blue-500 bg-opacity-10 border border-blue-500 border-opacity-20 flex items-center justify-center text-blue-400 font-bold text-lg mb-6">03</div>
-                    <h3 class="text-xl font-bold text-white mb-3">Telemetria Preditiva</h3>
-                    <p class="text-sm text-gray-400 leading-relaxed">Monitoramento de estresse elétrico de compressores e deltas térmicos em tempo real para antecipar colapsos mecânicos na unidade externa.</p>
-                </div>
+            <div id="pmoc" class="card">
+                <div class="card-num">02</div>
+                <h3>Sistemas de PMOC</h3>
+                <p>Implantação, execução e ART de Planos de Manutenção, Operação e Controle em estrita conformidade com a Lei 13.589/2018 da ANVISA.</p>
+            </div>
+            <div class="card">
+                <div class="card-num">03</div>
+                <h3>Telemetria Preditiva</h3>
+                <p>Monitoramento de estresse elétrico de compressores e deltas térmicos em tempo real para antecipar colapsos mecânicos na unidade externa.</p>
             </div>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="py-12 border-t border-gray-900 bg-gray-950 text-xs font-mono text-gray-500 tracking-wider">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
-            <div class="text-center md:text-left space-y-1">
-                <p class="text-gray-300 font-bold">© 2026 FRIOFÁCIL HVACR</p>
-                <p>Sede Administrativa: Av. Brigadeiro Faria Lima, 1572 – Pinheiros, São Paulo/SP</p>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <strong style="color: #cbd5e1;">© 2026 FRIOFÁCIL HVACR</strong><br>
+                Sede Administrativa: Av. Brigadeiro Faria Lima, 1572 – Pinheiros, São Paulo/SP
             </div>
-            <div class="text-center md:text-right">
-                <p>Infraestrutura Digital: GitHub Pages Corporativo</p>
-                <p class="text-blue-400">Status do Core: Operando em Alta Performance</p>
+            <div class="footer-right">
+                Infraestrutura Digital: GitHub Pages Corporativo<br>
+                <span class="text-accent">Status do Core: Operando em Alta Performance</span>
             </div>
         </div>
     </footer>
